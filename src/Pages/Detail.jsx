@@ -1,16 +1,25 @@
 import React from 'react'
 import "./detail.css"
-
+import { useParams } from 'react-router'
+import {data} from "../Components/utils/contant/ProfileData"
 const Detail = () => {
-
+  const {key}= useParams()
+let singdata = data.find((item)=>{
+  return item.id == key
+})
+console.log(singdata)
+const {name,description,profession,profileImage,profileLink}= singdata
   return (
     <div className='DetailWrapper'>
-    <img src="https://images.pexels.com/photos/1181682/pexels-photo-1181682.jpeg" alt="" />
+    {
+         profileImage ? <img  src={profileImage} alt="" /> : <img  src="./profile-icon.svg" alt="" />
+        }
     <div className='Detail'>
-      <h1>Chisom Chukwukwe</h1>
-      <h4>UI/UX Designer</h4>
-      <p>Hardworking and reliable UI/UX designer focused on going above and beyond to support teams and serve customers.</p>
-      <p>profileLink</p>
+     
+      <h1>{name}</h1>
+      <h4>{profession}</h4>
+      <p>{description}</p>
+      <img className='icon' src="./facebook-icon.svg" alt="" />
       <button >Buy me a coffee</button>
     </div>
     </div>
