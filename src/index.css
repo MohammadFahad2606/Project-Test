@@ -2,23 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-*{
+* {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
-.Header, .Footer{
+.Header,
+.Footer {
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
   background-color: #2980b9;
   text-transform: uppercase;
 }
-.CardWrapper{
+.Header:hover {
+  cursor: pointer;
+}
+.CardWrapper {
   padding: 50px 10px;
   display: flex;
   flex-wrap: wrap;

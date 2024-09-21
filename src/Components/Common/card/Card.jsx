@@ -22,7 +22,7 @@ const navigate = useNavigate()
 <h1>{name}</h1>
 <h4>{profession}</h4>
 <p>{description}</p>
-<img src="./facebook-icon.svg" alt="" />
+<a href={profileLink} target="_blank" rel="noopener noreferrer"><img src="./facebook-icon.svg" alt="" /></a>
 <button onClick={()=>navigate(`${id}`)} >View profile</button>
     </div>
   )

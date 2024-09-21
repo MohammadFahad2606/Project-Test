@@ -19,7 +19,8 @@ const {name,description,profession,profileImage,profileLink}= singdata
       <h1>{name}</h1>
       <h4>{profession}</h4>
       <p>{description}</p>
-      <img className='icon' src="./facebook-icon.svg" alt="" />
+      <a href={profileLink} target="_blank" rel="noopener noreferrer"><img src="./facebook-icon.svg" alt="" /></a>
+
       <button >Buy me a coffee</button>
     </div>
     </div>
