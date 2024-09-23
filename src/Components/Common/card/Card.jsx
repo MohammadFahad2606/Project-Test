@@ -4,9 +4,7 @@ import { useNavigate } from 'react-router'
 
 function Card(data) {
 const navigate = useNavigate()
-  const Detail = ()=>{
-    console.log("click")
-      }
+
       const {id,background,description,name,profession,profileImage,profileLink} = data.data
      
     
@@ -21,8 +19,18 @@ const navigate = useNavigate()
       </div>
 <h1>{name}</h1>
 <h4>{profession}</h4>
+<div className='description-box'>
 <p>{description}</p>
-<a href={profileLink} target="_blank" rel="noopener noreferrer"><img src="./facebook-icon.svg" alt="" /></a>
+</div>
+<div className="icon-wrapper">
+<a href={profileLink} target="_blank" rel="noopener noreferrer"><i className='fa-brands fa-facebook'></i></a>
+  <i className='fa-brands fa-linkedin'></i>
+  <i className='fa-brands fa-instagram'></i>
+  <i className='fa-brands fa-youtube'></i>
+  <i class='fa-brands fa-twitter'>
+    </i>
+    </div>
+
 <button onClick={()=>navigate(`${id}`)} >View profile</button>
     </div>
   )
